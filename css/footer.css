@@ -1,0 +1,29 @@
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:34px 0;
+}
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:16px;
+}
+.footer-inner p{
+  font-size:13px;
+  color:var(--ink-soft);
+}
+.footer-links{
+  display:flex;
+  gap:20px;
+}
+.footer-links a{
+  font-size:13.5px;
+  color:var(--ink-soft);
+  transition:color .2s ease;
+}
+.footer-links a:hover{color:var(--teal);}

@@ -1,0 +1,72 @@
+/* =========================================================
+   HERO — apresentação principal + terminal (elemento de
+   assinatura nº1)
+   ========================================================= */
+
+.hero{
+  padding:calc(var(--nav-h) + 70px) 0 100px;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 0.92fr;
+  gap:64px;
+  align-items:center;
+}
+.hero-location{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13.5px;
+  color:var(--ink-soft);
+  margin-bottom:22px;
+}
+.hero-location svg{color:var(--teal);flex-shrink:0;}
+
+.hero-name{
+  font-size:clamp(40px,5.4vw,64px);
+  font-weight:600;
+  line-height:1.05;
+}
+.hero-role{
+  font-size:clamp(19px,2.2vw,24px);
+  color:var(--ink-soft);
+  font-weight:400;
+  margin-top:14px;
+  max-width:30ch;
+}
+.hero-cta{
+  margin-top:34px;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.hero-stack{
+  margin-top:42px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* ----- terminal ----- */
+.terminal .window-body{color:var(--ink-soft);}
+.term-line{display:flex;gap:8px;flex-wrap:wrap;}
+.term-prompt{color:var(--teal);flex-shrink:0;}
+.term-output{color:var(--ink);font-weight:500;}
+.term-output.dim{color:var(--ink-soft);font-weight:400;}
+.term-gap{height:14px;}
+.term-cursor{
+  display:inline-block;
+  width:8px;height:16px;
+  background:var(--teal);
+  margin-left:2px;
+  vertical-align:-2px;
+  animation:blink 1s step-end infinite;
+}
+@keyframes blink{
+  0%,49%{opacity:1;}
+  50%,100%{opacity:0;}
+}
+@media (prefers-reduced-motion: reduce){
+  .term-cursor{animation:none;}
+}
+

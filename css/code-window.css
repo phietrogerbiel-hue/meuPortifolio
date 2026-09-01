@@ -1,0 +1,38 @@
+/* =========================================================
+   CODE WINDOW — componente visual compartilhado (moldura de
+   janela de terminal/editor). Usado pelo hero (.terminal) e
+   pela seção Sobre (.editor). É o elemento de assinatura do
+   site — usado propositalmente em só 2 lugares.
+   ========================================================= */
+
+.code-window{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 30px 60px -30px rgba(0,0,0,.5);
+}
+.code-window .window-bar{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:12px 16px;
+  background:var(--surface-2);
+  border-bottom:1px solid var(--line);
+}
+.window-dots{display:flex;gap:7px;}
+.window-dots span{width:10px;height:10px;border-radius:50%;}
+.window-dots span:nth-child(1){background:#ff5f56;}
+.window-dots span:nth-child(2){background:#ffbd2e;}
+.window-dots span:nth-child(3){background:#27c93f;}
+.window-bar .window-label{
+  font-family:var(--font-mono);
+  font-size:12px;
+  color:var(--ink-soft);
+}
+.code-window .window-body{
+  padding:22px 24px;
+  font-family:var(--font-mono);
+  font-size:14px;
+  line-height:1.85;
+}

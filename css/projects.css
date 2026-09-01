@@ -1,0 +1,90 @@
+/* =========================================================
+   PROJECTS — cases (My Essence + Vintage Barber)
+   ========================================================= */
+
+.projects{padding:0 0 100px;}
+.projects-head h2{
+  font-size:clamp(28px,3.2vw,38px);
+  font-weight:600;
+}
+.projects-head p{
+  margin-top:14px;
+  color:var(--ink-soft);
+  font-size:15.5px;
+}
+
+.project-list{
+  margin-top:44px;
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+.project-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--surface);
+  box-shadow:0 24px 48px -32px rgba(10,14,22,.35);
+}
+.project-cover{
+  position:relative;
+  min-height:320px;
+  display:flex;
+  align-items:flex-end;
+  padding:32px;
+  background-size:cover;
+  background-position:center;
+}
+.project-cover::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(11,14,20,.05) 0%, rgba(11,14,20,.85) 100%);
+}
+.project-cover.pattern-cover{
+  background-image:repeating-linear-gradient(135deg, #142018 0px, #142018 26px, #1b2a20 26px, #1b2a20 52px);
+}
+.project-cover-inner{
+  position:relative;
+  z-index:1;
+}
+.project-cover-inner .cover-tag{
+  display:inline-block;
+  padding:6px 12px;
+  border-radius:20px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.25);
+  font-size:12.5px;
+  color:#fff;
+  margin-bottom:14px;
+}
+.project-cover-inner h3{
+  font-size:clamp(24px,2.6vw,32px);
+  color:#fff;
+  font-weight:600;
+}
+
+.project-info{
+  padding:36px 38px;
+  display:flex;
+  flex-direction:column;
+}
+.project-info p{
+  color:var(--ink-soft);
+  font-size:15px;
+}
+.project-tags{
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.project-tags span{
+  font-size:12.5px;
+  padding:5px 12px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  color:var(--ink-soft);
+}
+.project-info .btn{margin-top:26px;align-self:flex-start;}

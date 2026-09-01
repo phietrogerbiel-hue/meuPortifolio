@@ -1,0 +1,35 @@
+/* =========================================================
+   STACK — tecnologias e ferramentas
+   ========================================================= */
+
+.stack{padding:0 0 100px;}
+.stack-head h2{
+  font-size:clamp(28px,3.2vw,38px);
+  font-weight:600;
+}
+.stack-head p{
+  margin-top:14px;
+  color:var(--ink-soft);
+  font-size:15.5px;
+}
+.stack-group{margin-top:36px;}
+.stack-group h3{
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink-soft);
+  margin-bottom:14px;
+}
+.stack-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.stack-chip{
+  padding:10px 18px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  font-size:14px;
+  background:var(--surface);
+  transition:border-color .2s ease, transform .2s ease;
+}
+.stack-chip:hover{border-color:var(--teal);transform:translateY(-2px);}

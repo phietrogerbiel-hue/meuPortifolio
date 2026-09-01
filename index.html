@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phietro Gabriel — Desenvolvedor Back-End em formação</title>
+<meta name="description" content="Portfólio de Phietro Gabriel, desenvolvedor back-end em formação. Projetos reais em HTML, CSS, JavaScript, Node.js e Express.">
+<script>
+(function(){
+  try{
+    if(localStorage.getItem('portfolio-theme') === 'light'){
+      document.documentElement.classList.add('light');
+    }
+  }catch(e){}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/code-window.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/stack.css">
+<link rel="stylesheet" href="css/projects.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <img src="images/logo-mark.jpg" alt="pScale Development">
+      <span class="brand-text"><strong>Phietro Gabriel</strong><span>pScale Development</span></span>
+    </a>
+    <nav class="primary-nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#stack">Stack</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar modo claro/escuro" aria-pressed="false">
+        <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a href="#contato" class="btn btn-primary">Contato</a>
+      <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre">Sobre</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#stack">Stack</a>
+  <a href="#contato">Contato</a>
+  <a href="#contato" class="btn btn-primary">Contato</a>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hero-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-6.1 7-12A7 7 0 0 0 5 10c0 5.9 7 12 7 12Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+          Manaus, Amazonas, Brasil
+        </div>
+        <h1 class="hero-name">Phietro Gabriel</h1>
+        <p class="hero-role">Desenvolvedor back-end em formação, construindo projetos reais enquanto aprende.</p>
+        <div class="hero-cta">
+          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+          <a href="https://wa.me/5592984672145?text=Ol%C3%A1%20Phietro!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn-outline">Falar no WhatsApp</a>
+        </div>
+        <div class="hero-stack">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Git &amp; GitHub</span>
+        </div>
+      </div>
+
+      <div class="code-window terminal" id="terminal">
+        <div class="window-bar">
+          <div class="window-dots"><span></span><span></span><span></span></div>
+          <span class="window-label">zsh — 72×16</span>
+        </div>
+        <div class="window-body">
+          <div class="term-line"><span class="term-prompt">visitor@portfolio ~ %</span>&nbsp;<span class="term-output" data-typed>whoami</span></div>
+          <div class="term-gap"></div>
+          <div class="term-line"><span class="term-output" data-reveal style="font-size:1.1em;">Phietro Gabriel</span></div>
+          <div class="term-gap"></div>
+          <div class="term-line"><span class="term-prompt">visitor@portfolio ~ %</span>&nbsp;<span class="term-output" data-typed>cat foco.txt</span></div>
+          <div class="term-line"><span class="term-output dim" data-reveal>Desenvolvedor back-end em formação</span></div>
+          <div class="term-line"><span class="term-output dim" data-reveal>Manaus, Amazonas, Brasil</span></div>
+          <div class="term-gap"></div>
+          <div class="term-line"><span class="term-prompt">visitor@portfolio ~ %</span><span class="term-cursor" id="termCursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="wrap about-grid">
+      <div class="about-heading">
+        <h2>Sobre</h2>
+        <p>Como cheguei até aqui e pra onde estou indo.</p>
+        <div class="about-badges">
+          <span class="tag">Aprendiz de TI @ Grupo Click IP</span>
+          <span class="tag">Foco em back-end</span>
+        </div>
+      </div>
+
+      <div class="code-window editor">
+        <div class="window-bar">
+          <div class="window-dots"><span></span><span></span><span></span></div>
+          <span class="window-label">sobre.js</span>
+        </div>
+        <div class="window-body">
+          <div class="editor-line"><span class="ln">01</span><span class="code comment">// sobre.js</span></div>
+          <div class="editor-line blank"><span class="ln">02</span><span class="code"></span></div>
+          <div class="editor-line"><span class="ln">03</span><span class="code comment">/**</span></div>
+          <div class="editor-line"><span class="ln">04</span><span class="code comment">&nbsp;* Aprendiz de TI no Grupo Click IP,</span></div>
+          <div class="editor-line"><span class="ln">05</span><span class="code comment">&nbsp;* resolvendo problemas técnicos e</span></div>
+          <div class="editor-line"><span class="ln">06</span><span class="code comment">&nbsp;* dando suporte no dia a dia.</span></div>
+          <div class="editor-line"><span class="ln">07</span><span class="code comment">&nbsp;*</span></div>
+          <div class="editor-line"><span class="ln">08</span><span class="code comment">&nbsp;* Fora da empresa, estudo pra virar</span></div>
+          <div class="editor-line"><span class="ln">09</span><span class="code comment">&nbsp;* dev back-end: Node.js, Express</span></div>
+          <div class="editor-line"><span class="ln">10</span><span class="code comment">&nbsp;* e PostgreSQL — sempre construindo</span></div>
+          <div class="editor-line"><span class="ln">11</span><span class="code comment">&nbsp;* projetos reais pra aprender de</span></div>
+          <div class="editor-line"><span class="ln">12</span><span class="code comment">&nbsp;* verdade, como os dois abaixo.</span></div>
+          <div class="editor-line"><span class="ln">13</span><span class="code comment">&nbsp;*/</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack" id="stack">
+    <div class="wrap">
+      <div class="stack-head">
+        <h2>Tecnologias</h2>
+        <p>O que uso no dia a dia pra construir e manter projetos.</p>
+      </div>
+      <div class="stack-group">
+        <h3>Construo com</h3>
+        <div class="stack-chips">
+          <span class="stack-chip">HTML5</span>
+          <span class="stack-chip">CSS3</span>
+          <span class="stack-chip">JavaScript</span>
+          <span class="stack-chip">Node.js</span>
+          <span class="stack-chip">Express</span>
+          <span class="stack-chip">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>Fluxo de trabalho</h3>
+        <div class="stack-chips">
+          <span class="stack-chip">Git</span>
+          <span class="stack-chip">GitHub</span>
+          <span class="stack-chip">VS Code</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projetos">
+    <div class="wrap">
+      <div class="projects-head">
+        <h2>Projetos</h2>
+        <p>Dois projetos construídos do zero, do design ao código.</p>
+      </div>
+
+      <div class="project-list">
+
+        <article class="project-card">
+          <div class="project-cover" style="background-image:url('images/project-myessence.jpg');">
+            <div class="project-cover-inner">
+              <span class="cover-tag">Projeto freelance real</span>
+              <h3>My Essence — Perfumaria</h3>
+            </div>
+          </div>
+          <div class="project-info">
+            <p>Landing page para uma perfumaria de verdade, com catálogo de produtos filtrável, modo claro/escuro e compra direta por WhatsApp em cada item. HTML, CSS e JavaScript puro, sem frameworks.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Responsivo</span>
+              <span>Modo escuro</span>
+            </div>
+            <a href="https://my-essence-perfumaria.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline">Ver site</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover pattern-cover">
+            <div class="project-cover-inner">
+              <span class="cover-tag">Projeto autoral</span>
+              <h3>Vintage Barber</h3>
+            </div>
+          </div>
+          <div class="project-info">
+            <p>Conceito autoral de barbearia clássica: mais do que um corte, uma experiência. Landing page criada para explorar identidade visual, tipografia e storytelling de marca do zero.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Landing page</span>
+            </div>
+            <a href="https://barbearia-landing-page-pi.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline">Ver site</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contato">
+    <div class="wrap contact-inner">
+      <h2>Vamos conversar sobre seu projeto</h2>
+      <p>Site novo, landing page ou uma ideia que ainda tá tomando forma — me chama e vemos como posso ajudar.</p>
+      <div class="contact-actions">
+        <a href="https://wa.me/5592984672145?text=Ol%C3%A1%20Phietro!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn-primary">Falar no WhatsApp</a>
+        <a href="https://www.linkedin.com/in/phietro-gabriel-126a07413/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+        <a href="https://github.com/phietrogerbiel-hue" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <p>© 2026 Phietro Gabriel · pScale Development</p>
+    <div class="footer-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="https://www.linkedin.com/in/phietro-gabriel-126a07413/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/phietrogerbiel-hue" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Voltar ao topo">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

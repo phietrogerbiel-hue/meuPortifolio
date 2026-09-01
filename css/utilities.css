@@ -1,0 +1,21 @@
+/* =========================================================
+   UTILITIES — botão "voltar ao topo"
+   ========================================================= */
+
+.to-top{
+  position:fixed;
+  right:24px;bottom:24px;
+  width:46px;height:46px;
+  border-radius:50%;
+  background:var(--surface);
+  border:1px solid var(--line);
+  color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;
+  transform:translateY(10px);
+  pointer-events:none;
+  transition:opacity .3s ease, transform .3s ease, border-color .2s ease;
+  z-index:800;
+}
+.to-top:hover{border-color:var(--teal);color:var(--teal);}
+.to-top.show{opacity:1;transform:translateY(0);pointer-events:auto;}

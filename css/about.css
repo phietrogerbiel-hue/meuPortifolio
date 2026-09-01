@@ -1,0 +1,53 @@
+/* =========================================================
+   ABOUT — painel estilo editor de código (elemento de
+   assinatura nº2), com gutter de linhas
+   ========================================================= */
+
+.about{padding:100px 0;}
+.about-grid{
+  display:grid;
+  grid-template-columns:0.85fr 1.15fr;
+  gap:60px;
+  align-items:start;
+}
+.about-heading h2{
+  font-size:clamp(28px,3.2vw,38px);
+  font-weight:600;
+  line-height:1.2;
+}
+.about-heading p{
+  margin-top:16px;
+  color:var(--ink-soft);
+  font-size:15.5px;
+}
+.about-badges{
+  margin-top:26px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:flex-start;
+}
+
+.editor .window-body{padding:0;}
+.editor-line{
+  display:flex;
+}
+.editor-line .ln{
+  width:38px;
+  flex-shrink:0;
+  text-align:right;
+  padding-right:16px;
+  color:var(--ink-soft);
+  opacity:.45;
+  user-select:none;
+  border-right:1px solid var(--line);
+  margin-right:16px;
+}
+.editor-line .code{
+  padding:1px 0;
+  color:var(--ink-soft);
+}
+.editor-line .code .comment{color:var(--ink-soft);}
+.editor-line .code .string{color:var(--amber);}
+.editor-line.blank .code{height:1.85em;}
+.editor .window-body{padding-top:20px;padding-bottom:20px;}

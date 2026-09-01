@@ -1,0 +1,28 @@
+/* =========================================================
+   RESPONSIVE — sempre o último <link> carregado no HTML
+   ========================================================= */
+
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;}
+  .about-grid{grid-template-columns:1fr;}
+  .project-card{grid-template-columns:1fr;}
+  .project-cover{min-height:220px;}
+}
+
+@media (max-width:860px){
+  nav.primary-nav{display:none;}
+  .burger{display:flex;}
+  .nav-actions .btn-primary{display:none;}
+}
+
+@media (max-width:560px){
+  .wrap{padding:0 20px;}
+  .hero{padding-top:calc(var(--nav-h) + 36px);padding-bottom:70px;}
+  .about,.stack,.projects{padding-top:70px;padding-bottom:70px;}
+  .terminal .window-body{font-size:12.5px;}
+  .editor-line .ln{width:26px;padding-right:10px;margin-right:10px;font-size:12.5px;}
+  .editor .window-body{font-size:12.5px;}
+  .project-info{padding:26px 24px;}
+  .contact{padding:70px 0 90px;}
+  .footer-inner{flex-direction:column;align-items:flex-start;}
+}
